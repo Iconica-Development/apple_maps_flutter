@@ -80,8 +80,7 @@ class MinMaxZoomPreference {
   final double? maxZoom;
 
   /// Unbounded zooming.
-  static const MinMaxZoomPreference unbounded =
-      MinMaxZoomPreference(null, null);
+  static const MinMaxZoomPreference unbounded = MinMaxZoomPreference(null, null);
 
   dynamic _toJson() => <dynamic>[minZoom, maxZoom];
 
@@ -94,7 +93,7 @@ class MinMaxZoomPreference {
   }
 
   @override
-  int get hashCode => hashValues(minZoom, maxZoom);
+  int get hashCode => Object.hash(minZoom, maxZoom);
 
   @override
   String toString() {
