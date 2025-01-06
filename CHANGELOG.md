@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.1
+
+* Fixes errors related to `Error: The method 'hashValues' isn't defined for`
+
 ## 1.4.0
 
 * Add option to set a `colorScheme` for the map (system, light, dark)
