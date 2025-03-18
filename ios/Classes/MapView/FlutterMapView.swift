@@ -206,7 +206,12 @@ class FlutterMapView: MKMapView, UIGestureRecognizerDelegate {
                 self.insetsLayoutMarginsFromSafeArea = insetsSafeArea
             }
         }
-
+        if #available(iOS 16.0, *) {
+            let config = MKStandardMapConfiguration()
+            config.pointOfInterestFilter = self.pointOfInterestFilter
+            config.showsTraffic = self.showsTraffic
+            self.preferredConfiguration = config
+        }
     }
     
     func setUserLocation() {
